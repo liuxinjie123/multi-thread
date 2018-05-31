@@ -11,7 +11,7 @@ public class ConcurrencyTest {
     private static void concurrency() throws InterruptedException {
         long start = System.currentTimeMillis();
         Thread thread = new Thread(new Runnable() {
-//            @Override
+            //            @Override
             public void run() {
                 int a = 0;
                 for (long i = 0; i < count; i++) {
@@ -21,7 +21,7 @@ public class ConcurrencyTest {
         });
         thread.start();
         int b = 0;
-        for (long i=0; i<count; i++) {
+        for (long i = 0; i < count; i++) {
             b--;
         }
         long time = System.currentTimeMillis() - start;
